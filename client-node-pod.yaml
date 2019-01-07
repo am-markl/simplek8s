@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: client-node-port
 spec:
+# NodePort is for dev purposes only, with some exceptions.
   type: NodePort
   ports:
     - port: 3050
