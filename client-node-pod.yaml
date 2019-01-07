@@ -4,6 +4,7 @@ metadata:
   name: client-node-port
 spec:
 # NodePort is for dev purposes only, with some exceptions.
+# NodePort ranges between 30000 and 32767
   type: NodePort
   ports:
     - port: 3050
