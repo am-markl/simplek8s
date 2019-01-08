@@ -1,0 +1,10 @@
+#This command deploys a new tagged version of the image without stopping the current pod.
+kubectl set image deployment/client-deployment client=mttlong/multi-client:v5
+
+#This command sets up the local docker client to communicate with the VM's docker server
+#Reasons to use docker inside Kubernetes VM:
+# 1) To debug using the docker cli
+# 2) Manually kill containers to test Kubernetes ability to self-heal
+# 3) Delete cache images in node
+eval $(minikube docker-env)
+
